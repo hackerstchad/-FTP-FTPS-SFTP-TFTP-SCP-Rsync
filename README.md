@@ -10,6 +10,10 @@
 
 ---
 
+<img width="1024" height="559" alt="55e73667-bfa2-4841-8613-9427483b439f" src="https://github.com/user-attachments/assets/d8545712-83ee-491f-bd16-f5395baea4d8" />
+
+<img width="784" height="391" alt="images" src="https://github.com/user-attachments/assets/5d2e97c9-05d4-48a1-9a13-6140f9474076" />
+
 ## Table des matières
 
 1. [Introduction générale](#introduction-générale)
@@ -71,13 +75,13 @@ FTP utilise deux canaux de communication distincts :
 ### Architecture FTP
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client FTP    │───── Canal commande ─────▶│   Serveur FTP   │
+┌─────────────────┐                            ┌─────────────────┐
+│   Client FTP    │───── Canal commande ─────▶│ Serveur FTP     │
 │                 │◀──────────────────────────│                 │
-│                 │                      │                 │
+│                 │                            │                 │
 │                 │────── Canal données ─────▶│                 │
 │                 │◀──────────────────────────│                 │
-└─────────────────┘                      └─────────────────┘
+└─────────────────┘                            └─────────────────┘
 ```
 
 ### Modes de fonctionnement
@@ -280,13 +284,13 @@ FTPS utilise TLS/SSL pour sécuriser les canaux de commande et de données. Il e
 ### Architecture FTPS
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client FTPS   │==== TLS/SSL tunnel ===▶│  Serveur FTPS   │
+┌─────────────────┐                         ┌─────────────────┐
+│   Client FTPS   │==== TLS/SSL tunnel ===▶ |  Serveur FTPS   │
 │                 │◀========================│                 │
-│                 │                      │                 │
-│                 │==== TLS/SSL tunnel ===▶│                 │
-│                 │◀========================│                 │
-└─────────────────┘                      └─────────────────┘
+│                 │                          |                 │
+│                 │==== TLS/SSL tunnel ===▶  │                 │
+│                 │◀======================== │                 │
+└─────────────────┘                          └─────────────────┘
 ```
 
 ### Où est utilisé FTPS ?
@@ -428,10 +432,10 @@ SFTP utilise un seul canal TCP (port 22 par défaut) sécurisé par SSH. Toutes 
 ### Architecture SFTP
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client SFTP   │==== SSH tunnel (22) ==▶│  Serveur SSH    │
-│                 │◀========================│   (SFTP subsyst.)│
-└─────────────────┘                      └─────────────────┘
+┌─────────────────┐                         ┌─────────────────┐
+│   Client SFTP   │==== SSH tunnel (22) ==▶ │  Serveur SSH    │
+│                 │◀========================│ (SFTP subsyst.) │
+└─────────────────┘                          └─────────────────┘
 ```
 
 ### Où est utilisé SFTP ?
@@ -611,10 +615,10 @@ TFTP utilise UDP sur le port 69. Il est extrêmement simple : pas d'authentifica
 ### Architecture TFTP
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client TFTP   │───── UDP port 69 ─────▶│  Serveur TFTP   │
+┌─────────────────┐                          ┌─────────────────┐
+│   Client TFTP   │───── UDP port 69 ─────▶ │  Serveur TFTP   │
 │                 │◀────────────────────────│                 │
-└─────────────────┘                      └─────────────────┘
+└─────────────────┘                          └─────────────────┘
 ```
 
 ### Où est utilisé TFTP ?
@@ -733,10 +737,10 @@ SCP utilise SSH pour établir une connexion sécurisée et copie les fichiers vi
 ### Architecture SCP
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client SCP    │==== SSH tunnel (22) ==▶│  Serveur SSH    │
+┌─────────────────┐                          ┌─────────────────┐
+│   Client SCP    │==== SSH tunnel (22) ==▶ │  Serveur SSH    │
 │                 │◀========================│                 │
-└─────────────────┘                      └─────────────────┘
+└─────────────────┘                          └─────────────────┘
 ```
 
 ### Où est utilisé SCP ?
@@ -839,10 +843,10 @@ Rsync utilise un algorithme de delta pour ne transférer que les parties modifi�
 ### Architecture Rsync
 
 ```
-┌─────────────────┐                      ┌─────────────────┐
-│   Client Rsync  │==== SSH / rsync ====▶│  Serveur Rsync  │
+┌─────────────────┐                        ┌─────────────────┐
+│   Client Rsync  │==== SSH / rsync ====▶ │  Serveur Rsync  │
 │                 │◀======================│                 │
-└─────────────────┘                      └─────────────────┘
+└─────────────────┘                        └─────────────────┘
 ```
 
 ### Où est utilisé Rsync ?
