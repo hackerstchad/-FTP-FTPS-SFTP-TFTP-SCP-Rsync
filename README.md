@@ -1,5 +1,8 @@
 # Guide Avancé des Protocoles de Transfert de Fichiers
 
+<img width="1024" height="559" alt="40aa7e68-557a-420c-ad5c-4739b0660946" src="https://github.com/user-attachments/assets/5c2baff4-4d9e-4bd5-9087-06f4e7511166" />
+
+
 **Auteur :** hackers_tchad  
 **Date de publication :** 2026  
 **Version :** 1.0 Avancée  
@@ -2019,7 +2022,7 @@ Dernière révision : 2026
 
 ## Chapitre supplémentaire 10 : Remerciements
 
-Ce guide a été rédigé par hackers_tchad dans le but de partager les connaissances sur les protocoles de transfert de fichiers avec la communauté francophone, notamment au Tchad et en Afrique. Merci aux créateurs de ces protocoles et aux communautés open source pour leur travail indispensable.
+Ce guide a été rédigé par hackers_tchad dans le but de partager les connaissances sur les protocoles de transfert de fichiers avec la communauté francophone, notamment au Tchad et en communautés Merci.
 
 **Auteur :** hackers_tchad  
 **Date :** 2026
